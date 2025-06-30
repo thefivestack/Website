@@ -16,7 +16,7 @@
     const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const favicon = document.createElement('link');
     favicon.rel = 'icon';
-    favicon.href = isDark ? 'assets/img/logo-light.png' : 'assets/img/logo-dark.png';
+    favicon.href = isDark ? 'assets/img/light-mode-logo.png' : 'assets/img/dark-mode-logo.png';
     document.head.appendChild(favicon);
 
     // Optional: Update on system theme change

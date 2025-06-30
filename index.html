@@ -22,8 +22,8 @@
     // Optional: Update on system theme change
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
       favicon.href = window.matchMedia('(prefers-color-scheme: dark)').matches
-        ? 'assets/img/logo-light.png'
-        : 'assets/img/logo-dark.png';
+        ? 'assets/img/light-mode-logo.png'
+        : 'assets/img/dark-mode-logo.png';
     });
   })();
 </script>

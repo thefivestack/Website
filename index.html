@@ -11,6 +11,23 @@
     <link rel="preload" as="image" href="assets/img/dark-mode-logo.png" />
     <link rel="preload" as="image" href="assets/img/light-mode-logo.png" />
 
+    <script>
+  (function() {
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.href = isDark ? 'assets/img/logo-light.png' : 'assets/img/logo-dark.png';
+    document.head.appendChild(favicon);
+
+    // Optional: Update on system theme change
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      favicon.href = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'assets/img/logo-light.png'
+        : 'assets/img/logo-dark.png';
+    });
+  })();
+</script>
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
